@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: sample-frontend-canary
-  name: sample-frontend-canary
+    app: frontend-canary
+  name: frontend-canary
 spec:
   ports:
   - name: 80-80
@@ -11,6 +11,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    load-balancer-sample-frontend-canary: "true"
+    load-balancer-frontend-canary: "true"
   sessionAffinity: None
   type: LoadBalancer
